@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jovin Lowell - Printable Resume</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Set default font to Inter -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 2rem 0;
+        }
+        /* Custom styles to match the two-tone PDF design */
+        .resume-container {
+            max-width: 8.5in; /* Standard letter paper width */
+            width: 100%;
+            min-height: 11in; /* Standard letter paper height */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar {
+            background-color: #262626; /* Dark section background */
+            color: white;
+        }
+        .main-content {
+            flex-grow: 1;
+        }
+        .profile-photo-container {
+            /* Mimics the dark bar extending from the sidebar on the original PDF */
+            background-color: #262626; 
+            padding-bottom: 3rem; /* Add padding to push the content down */
+        }
+        .photo-wrapper {
+            /* Centering the circular image within the container */
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid white; /* White border around the image */
+            transform: translateY(25%); /* Pushes the image down over the content divide */
+        }
+        .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            background-color: #d1d5db; /* A neutral gray color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            color: #4b5563;
+            object-fit: cover;
+        }
+        /* Style for the colored section titles */
+        .section-title {
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-size: 1.125rem;
+            border-bottom: 2px solid #5a5a5a; /* Dark gray line separator */
+            padding-bottom: 0.25rem;
+            margin-bottom: 0.75rem;
+        }
+        .sidebar .section-title {
+            color: white;
+            border-bottom-color: #888888; /* Lighter line for contrast */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .resume-container {
+                flex-direction: column;
+                min-height: auto;
+                padding: 0;
+            }
+            .content-grid {
+                display: block;
+            }
+            .sidebar {
+                width: 100%;
+                padding-bottom: 3rem; /* Increase padding at the bottom of the sidebar */
+            }
+            .main-content {
+                padding-top: 5rem !important; /* Adjust main content padding to account for photo offset */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="resume-container rounded-lg">
+    <!-- Profile Photo Section (Top Dark Bar) -->
+    <div class="profile-photo-container">
+        <!-- The GitHub profile picture URL is now used here -->
+        <div class="photo-wrapper">
+            <img class="photo-placeholder" 
+                 src="https://github.com/JovinLowellDula.png" 
+                 alt="Jovin Lowell Profile Picture"
+                 onerror="this.onerror=null;this.src='https://placehold.co/150x150/d1d5db/4b5563?text=Photo+Placeholder';"
+            >
+        </div>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="content-grid grid md:grid-cols-3">
+        <!-- LEFT COLUMN / SIDEBAR (1/3 Width) -->
+        <div class="sidebar p-8 pt-16 md:pt-8 md:col-span-1">
+            
+            <!-- CONTACT INFO -->
+            <div class="text-center md:text-left mb-6">
+                <!-- Name is styled to appear below the photo on the original PDF -->
+                <h1 class="text-4xl font-bold tracking-tight mb-1">JOVIN LOWELL</h1>
+                <h2 class="text-xl font-light mb-4">B. DULA</h2>
+                
+                <p class="text-sm flex items-center justify-center md:justify-start mt-4">
+                    <!-- Phone Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    09959580651
+                </p>
+                <p class="text-sm flex items-center justify-center md:justify-start mt-2">
+                    <!-- Email Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    Jovin53Lowell@gmail.com
+                </p>
+                <p class="text-sm mt-2 flex items-start justify-center md:justify-start">
+                    <!-- Location Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Unit #7, Foresthills Subdivision, 15 Midway, Quezon City, Metro Manila
+                </p>
+            </div>
+            
+            <!-- EDUCATION -->
+            <div class="mt-8">
+                <h3 class="section-title">EDUCATION</h3>
+                <ul class="space-y-2 text-sm">
+                    <li>
+                        <p class="font-semibold">New Era University</p>
+                        <p class="text-gray-300">2024-Present</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold">Metro Manila College</p>
+                        <p class="text-gray-300">2018-2024</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold">Krus Na Ligas Elementary School</p>
+                        <p class="text-gray-300">2017-2018</p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN / MAIN CONTENT (2/3 Width) -->
+        <div class="main-content p-8 pt-4 md:col-span-2">
+            
+            <!-- PROFILE -->
+            <div class="mb-6">
+                <h3 class="section-title text-gray-800">PROFILE</h3>
+                <p class="text-gray-700">
+                    A committed and motivated BSIT student with solid experience in both front-end and back-end programming. Skilled at creating responsive, user-friendly interfaces and fast, secure SQL databases. I am passionate about transforming data into effective web solutions and exploring the entire development lifecycle, from strategy to implementation.
+                </p>
+            </div>
+
+            <!-- SKILLS -->
+            <div class="mb-6">
+                <h3 class="section-title text-gray-800">SKILLS</h3>
+                <ul class="text-gray-700 space-y-2 list-disc pl-5">
+                    <li><span class="font-semibold">HTML</span> - Structured, clean, and responsive page building</li>
+                    <li><span class="font-semibold">SQL</span> - Database design, queries, and data management</li>
+                    <li><span class="font-semibold">Visual Studio Code</span> - Development and code organization</li>
+                    <li><span class="font-semibold">Lucidchart</span> - Flowcharting, planning, and system visualization</li>
+                    <li><span class="font-semibold">IBM Cloud</span> - Basic understanding of deployment and cloud workflows</li>
+                </ul>
+            </div>
+
+            <!-- EXPERIENCE -->
+            <div class="mb-6">
+                <h3 class="section-title text-gray-800">EXPERIENCE</h3>
+                <div class="mb-4">
+                    <div class="flex justify-between items-start mb-1">
+                        <h4 class="font-bold text-lg text-gray-800">OFFICE OF DISCIPLINE</h4>
+                        <span class="text-sm font-medium text-gray-600">January 2024-2025</span>
+                    </div>
+                    <ul class="text-gray-700 list-disc pl-5 space-y-1">
+                        <li>Provided administrative support including organizing records, managing student data, and assisting staff with daily operations.</li>
+                        <li>Developed strong communication, responsibility, and time-management skills in a structured office environment.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
